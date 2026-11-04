@@ -1,0 +1,18 @@
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configurações locais do editor
+.vscode/
+.idea/
+
+# Segredos e variáveis locais
+.env
+.env.*
+!.env.example
+
+# Dependências e arquivos locais de ferramentas
+node_modules/
+.vercel/
+*.log
