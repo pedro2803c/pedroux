@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebQuarto V2 · Case UX/UI · Pedro Henrique</title>
+<meta name="description" content="Case de UX/UI do WebQuarto: plataforma de gestão e reserva de quartos para anfitriões e viajantes, com o MVP interativo no Figma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;700&family=Pixelify+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="is-case">
+
+<header class="nav">
+  <a class="nav__logo" href="index.html" aria-label="Voltar ao portfólio">
+    <svg class="globe" data-color="#1eff1a" data-stroke="1.6" viewBox="0 0 100 100" aria-hidden="true"></svg>
+  </a>
+  <div class="nav__right">
+    <a class="nav__back" href="index.html#trabalhos">← Voltar<span> aos trabalhos</span></a>
+    <button class="nav__lang js-lang" type="button"><span data-l="pt">PT</span><span aria-hidden="true">/</span><span data-l="en">EN</span></button>
+    <button class="nav__menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu__top">
+    <span>Pedro Henrique ✦ Web Designer Sênior</span>
+    <button class="menu__close" type="button">Fechar ✕</button>
+  </div>
+  <ul class="menu__links">
+    <li><a href="index.html"><span>01</span>Início</a></li>
+    <li><a href="index.html#trabalhos"><span>02</span>Trabalhos</a></li>
+    <li><a href="abreu-oliveira.html"><span>03</span>Case Abreu Oliveira</a></li>
+    <li><a href="atlantec.html"><span>04</span>Case Atlantec</a></li>
+    <li><a href="grupo-brasil.html"><span>05</span>Case Grupo Brasil</a></li>
+    <li><a href="hooney.html"><span>06</span>Case Hooney</a></li>
+    <li><a href="webquarto.html"><span>07</span>Case WebQuarto</a></li>
+    <li><a href="moradiamatch.html"><span>08</span>Case MoradiaMatch</a></li>
+    <li><a href="beeviral.html"><span>09</span>Manual Beeviral</a></li>
+    <li><a class="js-linkedin" href="#" target="_blank" rel="noopener"><span>10</span>LinkedIn ↗</a></li>
+  </ul>
+</div>
+
+<main id="top">
+  <!-- CASE WEBQUARTO: o protótipo do Figma carrega quando a seção se aproxima da tela -->
+  <section class="case" id="webquarto" aria-labelledby="webquarto-title" style="--honey: #3fd6a1">
+    <header class="case__head">
+      <div>
+        <span class="label">Case · Design de UI/UX</span>
+        <h2 id="webquarto-title">WebQuarto <span>V2</span></h2>
+      </div>
+      <p class="case__lead">Plataforma que simplifica a gestão e a reserva de quartos: centraliza as operações do anfitrião e oferece ao viajante uma reserva clara e sem atritos, com foco em usabilidade, transparência e evolução escalável.</p>
+      <dl class="case__meta">
+        <div><dt>Ano</dt><dd>2025</dd></div>
+        <div><dt>Cliente</dt><dd>WebQuarto</dd></div>
+        <div><dt>Indústria</dt><dd>Reservas</dd></div>
+        <div><dt>Duração</dt><dd>1 ano</dd></div>
+        <div><dt>Papel</dt><dd>UX/UI &amp; Produto</dd></div>
+      </dl>
+    </header>
+
+    <div class="case__grid">
+      <div class="case__proto">
+        <div class="proto">
+          <span class="proto__loading">Carregando o MVP…</span>
+          <iframe class="js-proto" title="Protótipo interativo do WebQuarto no Figma" allowfullscreen
+            data-src="https://www.figma.com/embed?embed_host=share&amp;hide-ui=1&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJktjFzVxXENpIUV7WYGnxv%2FWebQuarto%3Fnode-id%3D2-36%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1"></iframe>
+        </div>
+        <div class="proto__bar">
+          <span class="proto__live">MVP interativo · clique e navegue</span>
+          <a href="https://www.figma.com/proto/JktjFzVxXENpIUV7WYGnxv/WebQuarto?node-id=2-36&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1" target="_blank" rel="noopener">Abrir no Figma ↗</a>
+        </div>
+      </div>
+
+      <div class="case__story">
+        <article class="step">
+          <span class="step__num">01</span>
+          <div>
+            <h3>Visão geral</h3>
+            <p>O WebQuarto é uma plataforma que simplifica a gestão e a reserva de quartos. O projeto atende dois públicos com objetivos diferentes: anfitriões, que precisam controlar a operação, e viajantes, que querem reservar com confiança.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <span class="step__num">02</span>
+          <div>
+            <h3>Problema</h3>
+            <div class="step__cols">
+              <div>
+                <h4>O que acontecia</h4>
+                <ul>
+                  <li>Anfitriões gerenciavam anúncios, disponibilidade e pagamentos em ferramentas fragmentadas</li>
+                  <li>Viajantes encontravam informações pouco claras, taxas ocultas e fluxos de reserva confusos</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Isso resultava em</h4>
+                <ul>
+                  <li>alta carga cognitiva para os anfitriões</li>
+                  <li>mais risco de erros de disponibilidade e preço</li>
+                  <li>baixa confiança dos viajantes na reserva</li>
+                  <li>abandonos durante a reserva e o checkout</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="step">
+          <span class="step__num">03</span>
+          <div>
+            <h3>Contexto e restrições</h3>
+            <ul>
+              <li>Escopo de MVP com recursos de engenharia limitados</li>
+              <li>Foco nos fluxos principais de reserva e gestão</li>
+              <li>Equilíbrio entre simplicidade e funcionalidades essenciais</li>
+              <li>Dois grupos de usuários distintos, com objetivos diferentes</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="step">
+          <span class="step__num">04</span>
+          <div>
+            <h3>Meu papel</h3>
+            <p>Responsável pelo design de produto de ponta a ponta:</p>
+            <ul style="margin-top: 10px">
+              <li>Descoberta e estratégia de UX</li>
+              <li>Fluxos de usuário e wireframes</li>
+              <li>Interfaces de alta fidelidade e prototipagem</li>
+              <li>Colaboração com engenharia e stakeholders de produto</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="step">
+          <span class="step__num">05</span>
+          <div>
+            <h3>Processo e insights</h3>
+            <div class="step__cols">
+              <div>
+                <h4>Métodos</h4>
+                <ul>
+                  <li>Análise de plataformas de reserva existentes e das suas principais lacunas de usabilidade</li>
+                  <li>Mapeamento das jornadas de ponta a ponta de anfitriões e viajantes</li>
+                  <li>Fluxos, wireframes e interfaces desenhados e iterados</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Principais insights</h4>
+                <ul>
+                  <li>Anfitriões valorizam controle e clareza operacional mais do que quantidade de recursos</li>
+                  <li>Viajantes priorizam transparência, velocidade e confiança</li>
+                  <li>Fluxos simples e boa hierarquia da informação reduziram muito a fricção</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="step">
+          <span class="step__num">06</span>
+          <div>
+            <h3>Resultados</h3>
+            <p>O MVP resolveu os dois lados do problema com uma única plataforma:</p>
+            <div class="step__cols">
+              <div>
+                <h4>Para o anfitrião</h4>
+                <ul>
+                  <li>anúncios, disponibilidade e pagamentos reunidos em um só lugar</li>
+                  <li>menos carga cognitiva e menos risco de erro de preço e disponibilidade</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Para o viajante</h4>
+                <ul>
+                  <li>informações e preços mais transparentes</li>
+                  <li>um fluxo de reserva mais claro, que transmite confiança até o checkout</li>
+                </ul>
+              </div>
+            </div>
+            <p class="step__quote">O principal aprendizado: anfitriões valorizam controle e clareza operacional mais do que quantidade de recursos.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <span class="step__num">07</span>
+          <div>
+            <h3>Aprendizados e próximos passos</h3>
+            <div class="step__cols">
+              <div>
+                <h4>Aprendizados</h4>
+                <ul>
+                  <li>Simplicidade tem mais impacto do que quantidade de recursos</li>
+                  <li>Arquitetura de informação clara é crítica em produtos transacionais</li>
+                  <li>Marketplaces exigem equilibrar as necessidades de públicos diferentes</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Próximos passos</h4>
+                <ul>
+                  <li>Validar as soluções com testes de usabilidade</li>
+                  <li>Iterar a transparência de preços e a clareza do checkout</li>
+                  <li>Explorar automações para reduzir o esforço operacional do anfitrião</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÓXIMO CASE -->
+  <a class="next-case" href="moradiamatch.html">
+    <span class="label">Próximo case</span>
+    <span class="next-case__name">MoradiaMatch →</span>
+    <span class="next-case__seg">Case UX/UI · App de locação</span>
+  </a>
+
+  <!-- CONTATO -->
+  <section class="cta" id="contato">
+    <svg class="globe cta__globe" data-color="#666" data-stroke=".4" viewBox="0 0 100 100" aria-hidden="true"></svg>
+    <div class="cta__inner reveal">
+      <span class="label">Aberto a oportunidades</span>
+      <h2>Vamos<br>conversar</h2>
+      <p>Procuro uma posição como Web Designer Sênior. Me chame no LinkedIn ou no WhatsApp.</p>
+      <div class="cta__actions">
+        <a class="btn js-linkedin" href="#" target="_blank" rel="noopener">Ver LinkedIn
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+        <a class="btn btn--ghost js-whats" href="#" target="_blank" rel="noopener">WhatsApp
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="cv/CV_Pedro_Henrique.pdf" download>Curr&iacute;culo (PDF)
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg>
+        </a>
+      </div>
+      <p class="cta__mail">ou escreva para <a href="mailto:pedro.jobs2896@gmail.com">pedro.jobs2896@gmail.com</a></p>    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="label">Pedro Henrique<br><span style="color:var(--muted)">Web Designer Sênior · UX/UI</span></div>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="index.html#trabalhos">Trabalhos</a></li>
+      <li><a href="abreu-oliveira.html">Case Abreu Oliveira</a></li>
+      <li><a href="atlantec.html">Case Atlantec</a></li>
+      <li><a href="grupo-brasil.html">Case Grupo Brasil</a></li>
+      <li><a href="hooney.html">Case Hooney</a></li>
+      <li><a href="webquarto.html">Case WebQuarto</a></li>
+      <li><a href="moradiamatch.html">Case MoradiaMatch</a></li>
+      <li><a href="beeviral.html">Manual Beeviral</a></li>
+      <li><a href="cv/CV_Pedro_Henrique.pdf" download>Curr&iacute;culo (PDF) &darr;</a></li>
+      <li><a class="js-linkedin" href="#" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+    </ul>
+  </div>
+  <div class="footer__name" aria-hidden="true">PEDRO</div>
+  <div class="footer__bottom"><span>© <span class="year">2026</span> Pedro Henrique</span><a href="#top">Voltar ao topo ↑</a></div>
+</footer>
+
+<a class="whats js-whats" href="#" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M8.6 8.4c.3-.5.6-.5.9-.5h.4c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.5.9 1.3 1.7 2.2 2.2.2.1.4.1.5 0l.6-.7c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.3.5 0 .5-.2 1.1-.6 1.4-.5.4-1.2.6-1.9.4-2.6-.7-4.6-2.7-5.4-5.2-.2-.7-.1-1.4.2-2.1z" fill="currentColor"/>
+  </svg>
+  <span class="whats__label">Fale comigo</span>
+</a>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
