@@ -1,4 +1,4 @@
-# Pedro Henrique · Web Designer Sênior
+# Pedro Henrique · Web Designer
 
 Portfólio de Pedro Henrique Coelho de Souza, com projetos de web design, UX/UI e branding.
 

@@ -816,3 +816,38 @@ mark, .hl {
   .reveal { opacity: 1; transform: none; }
   .about__title .word { opacity: 1; }
 }
+
+/* =====================================================================
+   Toques de verde-claro fluorescente (contraste com o roxo)
+   ===================================================================== */
+:root { --neon: #c6ff3d; --neon-glow: rgba(198, 255, 61, .55); }
+/* Destaques em pílula nas seções escuras */
+.is-dark mark, .services mark, .cta mark { background: var(--neon); box-shadow: 0 0 24px rgba(198, 255, 61, .35); }
+/* Pontos "ao vivo" */
+.dot-live::before, .proto__live::before {
+  background: var(--neon); box-shadow: 0 0 0 4px rgba(198, 255, 61, .3), 0 0 12px var(--neon-glow);
+}
+/* Selo "Novo" */
+.badge { background: var(--neon); color: #0b0b10; }
+.row:hover .badge, .row:focus-visible .badge { background: #0b0b10; color: var(--neon); }
+/* Hero e bento */
+.hero__avatars span:nth-child(3) { background: var(--neon); }
+.chip-dark { color: var(--neon); }
+.pills li { background: var(--neon); }
+.card--globe svg.globe { filter: drop-shadow(0 0 6px rgba(198, 255, 61, .25)); }
+.strip__tile span::before { content: "●"; color: #7bc600; margin-right: 5px; }
+/* Seções escuras */
+.service:nth-child(3) .service__num { background: var(--neon); }
+.service:nth-child(3) ul li::before { color: var(--neon); opacity: 1; }
+.about__cv > div:first-child h3 { color: var(--neon); }
+.kpi:nth-child(2) b { color: var(--neon); text-shadow: 0 0 24px rgba(198, 255, 61, .35); }
+.cta__card--glow .round-ico { background: var(--neon); }
+.cta .label { color: var(--neon); }
+/* Botão de WhatsApp */
+.whats svg { color: var(--neon); }
+.whats::before { border-color: var(--neon); }
+.whats:hover, .whats:focus-visible { background: var(--neon); color: #0b0b10; }
+.whats:hover svg { color: #0b0b10; }
+/* Detalhes de interação */
+.btn:hover svg { background: var(--neon); color: #0b0b10; }
+.footer__name:hover { color: var(--neon); -webkit-text-stroke-color: var(--neon); }
