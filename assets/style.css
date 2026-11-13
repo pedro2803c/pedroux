@@ -1640,3 +1640,7 @@ h1 mark, h2 mark, .about__title .word:last-child {
   display: inline-block; line-height: 1; padding: .02em .18em .1em; margin-top: .1em; border-radius: .22em;
 }
 .nowrap { white-space: nowrap; }
+
+/* Rodapé sem faixa vazia no final; o botão do WhatsApp fica ao lado de "Voltar ao topo" */
+.footer { padding-bottom: var(--gutter); }
+.footer__bottom { padding-right: 72px; }
