@@ -1612,3 +1612,11 @@ p, li, dd { text-wrap: pretty; }
 /* Destaque do título do case: caixa justa, sem encostar na linha de cima */
 .case__head h2 { line-height: 1.04; }
 .case__head h2 span { display: inline-block; line-height: 1; padding: .02em .16em .1em; margin-top: .1em; border-radius: .2em; }
+
+/* Link dentro do destaque lilás dos cases: escuro, em negrito e sublinhado roxo */
+.step__quote a {
+  color: #0b0b10; font-weight: 800; text-decoration: underline; text-decoration-color: var(--accent-strong);
+  text-decoration-thickness: 2px; text-underline-offset: 4px; transition: color .2s, text-decoration-color .2s;
+}
+.step__quote a b { font-weight: 800; color: var(--accent-strong); text-decoration: none; display: inline-block; }
+.step__quote a:hover { color: var(--accent-strong); }
