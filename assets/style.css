@@ -1021,3 +1021,46 @@ p, li, dd { text-wrap: pretty; }
 .tools li .tool-ico--line { --bg: var(--neon); --fg: #0b0b10; }
 .tools li .tool-ico--line svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .tools li:nth-child(n) svg { background: none; }
+
+/* Competências: descrição curta + entregas em pílulas com check */
+.service__name { gap: 10px; }
+.service__desc { font-size: 15px; line-height: 1.55; font-weight: 500; max-width: 34ch; opacity: .82; }
+.service ul {
+  display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-end;
+  padding-right: 46px; /* espaço para o número no canto */
+}
+.service ul li {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px 7px 7px; border-radius: 999px;
+  font: 600 14px/1.2 var(--font); letter-spacing: -.005em;
+  background: rgba(255, 255, 255, .42);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .5);
+  transition: transform .25s var(--ease), background .25s, box-shadow .25s;
+}
+.service ul li::before {
+  content: ""; flex: none; width: 20px; height: 20px; border-radius: 50%; opacity: 1;
+  background: #0b0b10 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c6ff3d' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 11px no-repeat;
+}
+.service ul li:hover { transform: translateY(-2px); background: #fff; }
+/* Card claro */
+.service:nth-child(2) ul li { background: #fff; box-shadow: inset 0 0 0 1px rgba(11, 11, 16, .08), 0 4px 14px rgba(11, 11, 16, .05); }
+.service:nth-child(2) ul li::before {
+  background-color: #7c3aed;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");
+}
+.service:nth-child(2) ul li:hover { background: var(--hl); }
+/* Card escuro */
+.service:nth-child(3) ul li { background: rgba(255, 255, 255, .07); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12); color: #f4f4f7; }
+.service:nth-child(3) ul li::before {
+  background-color: var(--neon);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b0b10' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");
+}
+.service:nth-child(3) ul li:hover { background: rgba(198, 255, 61, .16); box-shadow: inset 0 0 0 1px rgba(198, 255, 61, .5); }
+/* Entrada em cascata quando o card aparece */
+.service.reveal ul li { opacity: 0; transform: translateY(10px); transition: opacity .5s, transform .5s var(--ease), background .25s, box-shadow .25s; }
+.service.reveal.is-in ul li { opacity: 1; transform: none; }
+.service.reveal.is-in ul li:hover { transform: translateY(-2px); }
+.service ul li:nth-child(2) { transition-delay: .05s; } .service ul li:nth-child(3) { transition-delay: .1s; }
+.service ul li:nth-child(4) { transition-delay: .15s; } .service ul li:nth-child(5) { transition-delay: .2s; }
+.service ul li:nth-child(6) { transition-delay: .25s; }
+.service.reveal.is-in ul li:hover { transition-delay: 0s; }
