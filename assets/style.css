@@ -1551,3 +1551,10 @@ p, li, dd { text-wrap: pretty; }
 @media (min-width: 768px) {
   .footer__bottom { padding-right: 72px; } /* não fica embaixo do botão do WhatsApp */
 }
+
+/* Destaque verde "conversão": caixa justa ao texto, sem cobrir a linha de cima */
+.hero--future h1 { line-height: 1.1; }
+.hero--future h1 mark {
+  display: inline-block; line-height: 1; padding: .02em .2em .1em;
+  margin-top: .14em; border-radius: .22em;
+}
