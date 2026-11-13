@@ -6,7 +6,7 @@ const EN = {
   // Navegação, menu e elementos comuns
   'Menu': 'Menu',
   // Home no estilo bento (textos quebrados pelos destaques <mark> ficam em pedaços)
-  'Pedro Henrique — web designer com foco em': 'Pedro Henrique — web designer focused on',
+  'web designer com foco em': 'web designer focused on',
   'Sites, landing pages e interfaces que transformam visitas em clientes. Desde 2019, com clientes no Brasil, em Londres e em Madri.': 'Websites, landing pages and interfaces that turn visits into clients. Since 2019, with clients in Brazil, London and Madrid.',
   'Ver trabalhos': 'See work',
   'Especialidades': 'Specialties',

@@ -1233,3 +1233,32 @@ p, li, dd { text-wrap: pretty; }
   .hero__floor { height: 45%; background-size: 44px 44px; }
   .hero__fx::after { top: 66%; }
 }
+
+/* Hero futurista: leitura do texto em primeiro lugar */
+.hero__name { display: block; }
+/* Subtítulo mais claro, mais pesado e com sombra para descolar do fundo */
+.hero--future .hero__sub {
+  color: #f1f1f6; font-weight: 500; max-width: 44ch;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 18px rgba(7, 7, 12, .95);
+}
+/* Halo escuro atrás do bloco de texto, para nada do fundo competir com ele */
+.hero--future .hero__inner::before {
+  content: ""; position: absolute; z-index: -1; inset: -12% -18%;
+  background: radial-gradient(closest-side, rgba(7, 7, 12, .85), rgba(7, 7, 12, .55) 55%, transparent);
+  pointer-events: none;
+}
+/* Grade e horizonte descem para baixo do botão */
+.hero__floor { height: 38%; bottom: -6%; }
+.hero__fx::after { top: auto; bottom: 34%; }
+/* Esfera grande sai de trás do texto */
+.hero--future .orb--3 { right: 3%; bottom: 4%; width: clamp(120px, 14vw, 200px); }
+.hero--future .orb--2 { top: 14%; right: 10%; }
+@media (max-width: 991px) {
+  .hero--future .orb--3 { right: -40px; bottom: 2%; width: 120px; }
+}
+@media (max-width: 767px) {
+  .hero__floor { height: 30%; }
+  .hero__fx::after { bottom: 26%; }
+  .hero--future .orb--3 { right: -50px; bottom: 6%; width: 110px; opacity: .85; }
+  .hero--future .orb--2 { top: 12%; right: 4%; }
+}
