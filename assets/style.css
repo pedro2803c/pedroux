@@ -851,3 +851,8 @@ mark, .hl {
 /* Detalhes de interação */
 .btn:hover svg { background: var(--neon); color: #0b0b10; }
 .footer__name:hover { color: var(--neon); -webkit-text-stroke-color: var(--neon); }
+/* Botão de WhatsApp todo em verde fluorescente */
+.whats { background: var(--neon); color: #0b0b10; box-shadow: 0 0 24px var(--neon-glow), 0 12px 30px rgba(11, 11, 16, .2); }
+.whats svg, .whats:hover svg { color: #0b0b10; }
+.whats:hover, .whats:focus-visible { background: #0b0b10; color: var(--neon); }
+.whats:hover svg, .whats:focus-visible svg { color: var(--neon); }
