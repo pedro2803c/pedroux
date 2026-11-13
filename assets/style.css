@@ -1007,3 +1007,17 @@ p, li, dd { text-wrap: pretty; }
 .manual__intro { font-size: 16px; }
 .flow__count { font-size: 14px; }
 .swatch span { font-size: 13px; opacity: .9; }
+
+/* Faixa de ferramentas com os logotipos reais (Simple Icons, CC0) nas cores das marcas */
+.tools li .tool-ico {
+  flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+  background: var(--bg, #0b0b10); color: var(--fg, #fff);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .08);
+}
+.tools li .tool-ico svg {
+  width: 20px; height: 20px; padding: 0; border-radius: 0; background: none;
+  fill: currentColor; stroke: none;
+}
+.tools li .tool-ico--line { --bg: var(--neon); --fg: #0b0b10; }
+.tools li .tool-ico--line svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.tools li:nth-child(n) svg { background: none; }
