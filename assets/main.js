@@ -604,3 +604,16 @@ if (holo && !reduceMotion) {
     holo.style.removeProperty('--rx'); holo.style.removeProperty('--ry');
   });
 }
+
+// Índice dos cases: marca a etapa que está na tela
+const tocLinks = [...document.querySelectorAll('.case__toc a')];
+if (tocLinks.length) {
+  const byId = new Map(tocLinks.map(a => [a.hash.slice(1), a]));
+  const tocIo = new IntersectionObserver(entries => {
+    for (const e of entries) if (e.isIntersecting) {
+      tocLinks.forEach(a => a.classList.remove('is-active'));
+      byId.get(e.target.id)?.classList.add('is-active');
+    }
+  }, { rootMargin: '-35% 0px -60% 0px' });
+  byId.forEach((_, id) => { const el = document.getElementById(id); if (el) tocIo.observe(el); });
+}
