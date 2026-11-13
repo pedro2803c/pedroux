@@ -44,7 +44,7 @@ else (function loop(t) { drawGlobes(t); requestAnimationFrame(loop); })(0);
 // url de site externo abre no visualizador; url de página .html (case) abre na mesma aba
 const CATEGORIES = { produto: 'Produto & UX', branding: 'Branding', saude: 'Saúde', beleza: 'Beleza & varejo', negocios: 'Negócios', servicos: 'Serviços & indústria' };
 const PROJECTS = [
-  { name: 'Mechas Contour', url: 'https://mechas-contour-site.vercel.app/', label: 'Landing page · Beleza & conversão', img: 'mechascontour', imgUrl: 'prints/mechascontour.png', seg: 'Beleza · Landing page · Mechas Contour', cat: 'beleza', isNew: true, wideMd: true },
+  { name: 'Mechas Contour', url: 'https://mechas-contour-site.vercel.app/', label: 'Landing page · Beleza & conversão', img: 'mechascontour', seg: 'Beleza · Landing page · Mechas Contour', cat: 'beleza', isNew: true, wideMd: true },
   { name: 'Abreu Oliveira', url: 'abreu-oliveira.html', label: 'Case · Landing page para tráfego pago', img: 'abreuoliveira', seg: 'Advocacia · Landing page · ~30 contratos/mês', cat: 'negocios', isNew: true },
   { name: 'Atlantec', url: 'atlantec.html', label: 'Case · Reestruturação de catálogo', img: 'atlantec', seg: 'Instrumentação oceanográfica · Catálogo B2B', cat: 'servicos', isNew: true },
   { name: 'Grupo Brasil', url: 'grupo-brasil.html', label: 'Case · Rebranding, site e blog', img: 'grupobrasilservicos', seg: 'Terceirização · Rebranding e conteúdo', cat: 'servicos', isNew: true },
