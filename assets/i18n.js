@@ -72,7 +72,6 @@ const EN = {
   // Home: topo
   'Sites, landing pages e interfaces com foco em conversão': 'Websites, landing pages and interfaces built to convert',
   'Desde 2019 em projetos digitais': 'Working on digital projects since 2019',
-  'Clientes no Brasil, em Londres e em Madri': 'Clients in Brazil, London and Madrid',
   'Aberto a oportunidades': 'Open to opportunities',
 
   // Home: sobre
@@ -98,6 +97,7 @@ const EN = {
   'Especialização em UX/UI Design': 'Specialization in UX/UI Design',
   'Bacharelado em Publicidade e Marketing': "Bachelor's degree in Advertising and Marketing",
   'Ferramentas': 'Tools',
+  'Você': 'You',
   'contratos/mês': 'contracts/mo',
   'Protótipo → site no ar': 'Prototype → live site',
   'Pesquisa': 'Research',

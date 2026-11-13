@@ -569,3 +569,22 @@ if (futureHero && !reduceMotion && matchMedia('(hover: hover)').matches) {
     futureHero.style.setProperty('--my', `${e.clientY - r.top}px`);
   });
 }
+
+// Etiqueta "Você" piscando que acompanha o ponteiro do mouse (só com mouse)
+if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  const tag = document.createElement('span');
+  tag.className = 'you-tag';
+  tag.setAttribute('aria-hidden', 'true');
+  tag.textContent = 'Você';
+  document.body.appendChild(tag);
+  let x = -100, y = -100, raf = 0;
+  const place = () => { raf = 0; tag.style.transform = `translate(${x + 20}px, ${y + 24}px)`; };
+  addEventListener('pointermove', e => {
+    if (e.pointerType !== 'mouse') return;
+    x = e.clientX; y = e.clientY;
+    tag.classList.add('is-on');
+    if (!raf) raf = requestAnimationFrame(place);
+  }, { passive: true });
+  document.documentElement.addEventListener('mouseleave', () => tag.classList.remove('is-on'));
+  addEventListener('blur', () => tag.classList.remove('is-on'));
+}
