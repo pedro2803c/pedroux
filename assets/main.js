@@ -355,7 +355,7 @@ if (location.hash.length > 1) {
     c.fillStyle = '#000';
     for (let x = Math.floor((mx - R) / b) * b; x < mx + R; x += b) c.fillRect(x, my - R, 1, R * 2);
     for (let y = Math.floor((my - R) / b) * b; y < my + R; y += b) c.fillRect(mx - R, y, R * 2, 1);
-    c.fillStyle = 'rgba(30, 255, 26, .85)';
+    c.fillStyle = 'rgba(165, 124, 255, .9)';
     greens.forEach(([x, y]) => c.fillRect(x + 1, y + 1, b - 1, b - 1));
     c.restore();
 

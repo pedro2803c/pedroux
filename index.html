@@ -7,15 +7,22 @@
 <meta name="description" content="Portfólio de Pedro Henrique, Web Designer Sênior e UX/UI Designer: sites, landing pages e interfaces com foco em conversão.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;700&family=Pixelify+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
 <header class="nav">
   <a class="nav__logo" href="#top" aria-label="Início">
-    <svg class="globe" data-color="#1eff1a" data-stroke="1.6" viewBox="0 0 100 100" aria-hidden="true"></svg>
+    <svg class="globe" data-color="#a57cff" data-stroke="1.6" viewBox="0 0 100 100" aria-hidden="true"></svg>
+    <span>Pedro Henrique</span>
   </a>
+  <ul class="nav__links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#competencias">Competências</a></li>
+    <li><a href="#trabalhos">Trabalhos</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
   <div class="nav__right">
     <button class="nav__lang js-lang" type="button"><span data-l="pt">PT</span><span>/</span><span data-l="en">EN</span></button>
     <button class="nav__menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
@@ -45,28 +52,61 @@
 <main id="top">
   <!-- HERO -->
   <section class="hero">
-    <div class="hero__title">
-      <h1>PEDRO HENRIQUE</h1>
-      <p>Web Designer Sênior · UX/UI</p>
+    <span class="orb orb--1" aria-hidden="true"></span>
+    <span class="orb orb--2" aria-hidden="true"></span>
+    <span class="orb orb--3" aria-hidden="true"></span>
+    <span class="orb orb--4" aria-hidden="true"></span>
+
+    <div class="hero__inner">
+      <div class="hero__avatars" aria-hidden="true">
+        <img src="img/pedro.webp" alt="" width="46" height="46"><span>UX</span><span>UI</span>
+      </div>
+      <h1>Pedro Henrique — web designer <mark>sênior</mark> com foco em conversão</h1>
+      <p class="hero__sub">Sites, landing pages e interfaces que transformam visitas em clientes. Desde 2019, com clientes no Brasil, em Londres e em Madri.</p>
+      <a class="btn" href="#trabalhos">Ver trabalhos
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+    </div>
+
+    <div class="hero__foot">
+      <ul class="tabs" aria-label="Especialidades">
+        <li>Web Design</li><li>UX/UI</li><li>Landing pages</li><li>Branding</li>
+      </ul>
+      <span class="dot-live">Aberto a oportunidades</span>
+    </div>
+  </section>
+
+  <!-- DESTAQUES em bento -->
+  <section class="stats" aria-label="Destaques">
+    <div class="bento bento--stats">
+      <div class="card card--head reveal">
+        <h2>Design que transforma <mark>cliques</mark> em clientes</h2>
+        <div class="card--accent">
+          <span class="chip-dark">Do briefing ao ar</span>
+          <p>Pesquisa → Design → Conversão<br>em um só processo</p>
+          <a class="round-ico" href="#competencias" aria-label="Ver competências">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </div>
+      <a class="card card--shot reveal" href="abreu-oliveira.html">
+        <img src="prints/abreuoliveira.webp" alt="" loading="lazy" width="1200" height="750">
+        <div class="stat"><b>~30</b><span>contratos por mês a partir de uma landing page</span></div>
+        <div class="card__foot"><span>Case Abreu Oliveira</span>
+          <span class="round-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </div>
+      </a>
+      <div class="card card--dark card--globe reveal">
+        <svg class="globe" data-color="#a57cff" data-stroke=".6" viewBox="0 0 100 100" aria-hidden="true"></svg>
+        <div class="stat"><b>18</b><span>projetos no portfólio</span></div>
+        <ul class="pills"><li>Brasil</li><li>Londres</li><li>Madri</li></ul>
+      </div>
     </div>
 
     <div class="strip" aria-hidden="true">
       <div class="strip__track">
         <!-- Preenchido via JS a partir de PROJECTS -->
       </div>
-    </div>
-
-    <p class="hero__tagline">
-      Sites, landing pages e interfaces com foco em conversão<br>
-      Desde 2019 em projetos digitais <b>✦</b> Clientes no Brasil, em Londres e em Madri
-    </p>
-
-    <div class="hero__corners">
-      <span class="dot-live">Aberto a oportunidades</span>
-      <span class="hero__links">
-        <a class="js-linkedin" href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="cv/CV_Pedro_Henrique.pdf" download>Currículo ↓</a>
-      </span>
     </div>
   </section>
 
@@ -125,7 +165,15 @@
   </section>
 
   <!-- COMPETÊNCIAS -->
-  <section class="services" id="competencias" aria-label="Competências">
+  <section class="services" id="competencias" aria-labelledby="comp-title">
+    <div class="services__head">
+      <div>
+        <span class="label">Competências</span>
+        <h2 id="comp-title">Do visual à <mark>conversão</mark>, em três frentes</h2>
+      </div>
+      <p>Cada projeto une estratégia, interface e marca para gerar resultado real, não só uma tela bonita.</p>
+    </div>
+    <div class="services__grid">
     <article class="service reveal">
       <div class="service__name"><span class="service__num">1</span><h3>Web Design</h3></div>
       <ul>
@@ -146,6 +194,7 @@
         <li>Identidade visual</li><li>Manual de marca</li><li>Logotipos</li><li>Tipografia</li>
       </ul>
     </article>
+    </div>
   </section>
 
   <!-- TRABALHOS -->
@@ -174,24 +223,32 @@
   </section>
 
   <!-- CONTATO -->
-  <section class="cta" id="contato">
-    <svg class="globe cta__globe" data-color="#666" data-stroke=".4" viewBox="0 0 100 100" aria-hidden="true"></svg>
-    <div class="cta__inner reveal">
-      <span class="label">Aberto a oportunidades</span>
-      <h2>Vamos<br>conversar</h2>
-      <p>Procuro uma posição como Web Designer Sênior. Me chame no LinkedIn ou no WhatsApp.</p>
-      <div class="cta__actions">
-        <a class="btn js-linkedin" href="#" target="_blank" rel="noopener">Ver LinkedIn
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M8 7h9v9"/></svg>
-        </a>
-        <a class="btn btn--ghost js-whats" href="#" target="_blank" rel="noopener">WhatsApp
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M8 7h9v9"/></svg>
-        </a>
-        <a class="btn btn--ghost" href="cv/CV_Pedro_Henrique.pdf" download>Curr&iacute;culo (PDF)
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg>
-        </a>
+  <section class="cta cta--bento" id="contato">
+    <div class="cta__intro reveal">
+      <div>
+        <span class="label">Aberto a oportunidades</span>
+        <h2 style="margin-top:14px">Vamos criar o próximo <mark>projeto</mark> — juntos</h2>
       </div>
-      <p class="cta__mail">ou escreva para <a href="mailto:pedro.jobs2896@gmail.com">pedro.jobs2896@gmail.com</a></p>    </div>
+      <div>
+        <p>Procuro uma posição como Web Designer Sênior. Me chame no LinkedIn ou no WhatsApp.</p>
+        <p class="cta__mail" style="margin-top:10px">ou escreva para <a href="mailto:pedro.jobs2896@gmail.com">pedro.jobs2896@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="cta__cards reveal">
+      <a class="cta__card cta__card--glow js-linkedin" href="#" target="_blank" rel="noopener">
+        <span class="round-ico" aria-hidden="true">+</span>
+        <b>Ver LinkedIn</b><small>Experiência, recomendações e contato direto</small>
+      </a>
+      <a class="cta__card cta__card--light js-whats" href="#" target="_blank" rel="noopener">
+        <span class="round-ico" aria-hidden="true">+</span>
+        <b>WhatsApp</b><small>Resposta rápida para conversar sobre a vaga</small>
+      </a>
+      <a class="cta__card cta__card--accent" href="cv/CV_Pedro_Henrique.pdf" download>
+        <span class="cta__mark" aria-hidden="true">P.</span>
+        <span class="round-ico" aria-hidden="true">↓</span>
+        <b>Currículo (PDF)</b><small>Web Designer Sênior · UX/UI</small>
+      </a>
+    </div>
   </section>
 </main>
 
