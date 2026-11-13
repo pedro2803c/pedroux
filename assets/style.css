@@ -1558,3 +1558,7 @@ p, li, dd { text-wrap: pretty; }
   display: inline-block; line-height: 1; padding: .02em .2em .1em;
   margin-top: .14em; border-radius: .22em;
 }
+
+/* Destaque do título de contato: caixa justa, sem encostar na linha de cima */
+.cta h2 { line-height: 1.12; }
+.cta h2 mark { display: inline-block; line-height: 1; padding: .02em .2em .1em; margin-top: .12em; border-radius: .22em; }

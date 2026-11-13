@@ -30,7 +30,7 @@ const EN = {
   'Cada projeto une estratégia, interface e marca para gerar resultado real, não só uma tela bonita.': 'Every project combines strategy, interface and brand to deliver real results, not just a pretty screen.',
   'Vamos criar o próximo': "Let's build the next",
   'projeto': 'project',
-  '— juntos': '— together',
+  'juntos': 'together',
   'Experiência, recomendações e contato direto': 'Experience, recommendations and direct contact',
   'Resposta rápida para conversar sobre a vaga': 'Quick reply to talk about the role',
   'Fechar ✕': 'Close ✕',
