@@ -1301,3 +1301,38 @@ p, li, dd { text-wrap: pretty; }
 @supports (-moz-appearance: none) {
   html { scrollbar-color: #a57cff #0b0b10; }
 }
+
+/* =====================================================================
+   Navegação em vidro escuro, com elementos bem destacados
+   ===================================================================== */
+.nav {
+  background: rgba(11, 11, 16, .78); color: #f4f4f7;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12), 0 12px 40px rgba(0, 0, 0, .35), 0 0 40px rgba(124, 58, 237, .18);
+  backdrop-filter: blur(18px) saturate(1.5); -webkit-backdrop-filter: blur(18px) saturate(1.5);
+}
+.nav__logo { color: #fff; font-size: 15px; }
+.nav__logo svg {
+  background: linear-gradient(145deg, #2a1660, #0b0b10);
+  box-shadow: inset 0 0 0 1px rgba(165, 124, 255, .45), 0 0 18px rgba(124, 58, 237, .45);
+}
+.nav__links a { color: #c9c9d6; font-size: 12px; transition: color .2s; position: relative; }
+.nav__links a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; border-radius: 2px;
+  background: var(--neon); transform: scaleX(0); transition: transform .3s var(--ease);
+}
+.nav__links a:hover { color: #fff; }
+.nav__links a:hover::after { transform: scaleX(1); }
+.nav__lang { color: #fff; border-color: rgba(255, 255, 255, .28); background: rgba(255, 255, 255, .06); }
+.nav__lang span { opacity: .55; }
+.nav__lang span.is-active { opacity: 1; color: var(--neon); }
+.nav__lang:hover { border-color: var(--neon); }
+.nav__menu-btn { background: var(--neon); color: #0b0b10; box-shadow: 0 0 20px rgba(198, 255, 61, .35); }
+.nav__menu-btn:hover { background: #fff; }
+.nav__back { color: #fff; }
+.nav__back:hover { color: var(--neon); }
+@media (max-width: 767px) {
+  .nav__logo span { display: inline; font-size: 14px; }
+}
+@media (max-width: 359px) {
+  .nav__logo span { display: none; }
+}
