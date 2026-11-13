@@ -1108,3 +1108,128 @@ p, li, dd { text-wrap: pretty; }
   .process b { font-size: 14px; }
   .process::before, .process::after { top: 28px; }
 }
+
+/* =====================================================================
+   Hero futurista: fundo escuro, aurora roxa, piso em grade, cards de vidro
+   ===================================================================== */
+.hero--future {
+  --fg: #f4f4f7; --soft: #c9c9d6; color: var(--fg);
+  background: #07070c;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06);
+}
+.hero__fx { position: absolute; inset: 0; z-index: -1; overflow: hidden; border-radius: inherit; pointer-events: none; }
+.hero__aurora {
+  position: absolute; inset: -20%;
+  background:
+    radial-gradient(40% 35% at 25% 30%, rgba(124, 58, 237, .55), transparent 70%),
+    radial-gradient(35% 30% at 75% 25%, rgba(165, 124, 255, .35), transparent 70%),
+    radial-gradient(30% 25% at 60% 75%, rgba(198, 255, 61, .14), transparent 70%);
+  filter: blur(30px); animation: aurora 14s ease-in-out infinite alternate;
+}
+@keyframes aurora { 0% { transform: translate(0, 0) rotate(0); } 50% { transform: translate(4%, -3%) rotate(6deg); } 100% { transform: translate(-4%, 3%) rotate(-4deg); } }
+/* Piso em grade com perspectiva, andando em direção à tela */
+.hero__floor {
+  position: absolute; left: -50%; right: -50%; bottom: -10%; height: 60%;
+  background-image:
+    linear-gradient(rgba(165, 124, 255, .55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(165, 124, 255, .55) 1px, transparent 1px);
+  background-size: 64px 64px;
+  transform: perspective(500px) rotateX(68deg); transform-origin: center top;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 35%, #000 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 35%, #000 70%, transparent 100%);
+  animation: floor 3s linear infinite;
+}
+@keyframes floor { to { background-position: 0 64px, 0 0; } }
+/* Horizonte brilhante */
+.hero__fx::after {
+  content: ""; position: absolute; left: 0; right: 0; top: 58%; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(198, 255, 61, .7), rgba(165, 124, 255, .9), transparent);
+  box-shadow: 0 0 24px 4px rgba(165, 124, 255, .45);
+}
+/* Partículas */
+.hero__stars {
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 10% 20%, #fff, transparent), radial-gradient(1px 1px at 30% 60%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 55% 15%, #c6ff3d, transparent), radial-gradient(1px 1px at 70% 40%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 85% 25%, #fff, transparent), radial-gradient(1px 1px at 92% 55%, #a57cff, transparent),
+    radial-gradient(1px 1px at 18% 45%, #a57cff, transparent), radial-gradient(1.5px 1.5px at 45% 35%, #fff, transparent);
+  opacity: .7; animation: twinkle 4s ease-in-out infinite alternate;
+}
+@keyframes twinkle { to { opacity: .25; } }
+/* Luz que segue o mouse (posição vem do main.js) */
+.hero__spot {
+  position: absolute; width: 520px; height: 520px; border-radius: 50%;
+  left: var(--mx, 50%); top: var(--my, 40%); translate: -50% -50%;
+  background: radial-gradient(closest-side, rgba(165, 124, 255, .28), transparent);
+  transition: left .25s ease-out, top .25s ease-out;
+}
+
+/* Conteúdo sobre o fundo escuro */
+.hero--future .hero__sub { color: var(--soft); }
+.hero--future h1 { text-shadow: 0 0 40px rgba(124, 58, 237, .45); }
+.hero--future h1 mark {
+  background: var(--neon); color: #0b0b10; text-shadow: none;
+  box-shadow: 0 0 30px rgba(198, 255, 61, .45), 0 0 0 1px rgba(255, 255, 255, .2) inset;
+}
+.hero--future .hero__avatars > * { border-color: #07070c; }
+.hero--future .btn { background: #fff; color: #0b0b10; box-shadow: 0 0 0 6px rgba(255, 255, 255, .08), 0 10px 40px rgba(165, 124, 255, .45); }
+.hero--future .btn svg { background: var(--neon); color: #0b0b10; }
+.hero--future .btn:hover { background: var(--neon); }
+.hero--future .btn:hover svg { background: #0b0b10; color: var(--neon); }
+.hero--future .tabs li {
+  background: rgba(255, 255, 255, .07); color: #f4f4f7;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .14); backdrop-filter: blur(8px);
+}
+.hero--future .tabs li:first-child { background: var(--neon); color: #0b0b10; box-shadow: 0 0 20px rgba(198, 255, 61, .35); }
+.hero--future .dot-live { color: #f4f4f7; }
+.hero--future .orb { box-shadow: 0 0 60px rgba(124, 58, 237, .6), inset -14px -18px 40px rgba(20, 0, 60, .45); }
+.hero--future .orb--4 { opacity: .35; }
+
+/* Cards de vidro flutuando */
+.float-card {
+  position: absolute; z-index: 1; display: grid; gap: 2px;
+  padding: 14px 16px; border-radius: 18px; color: #f4f4f7;
+  background: linear-gradient(160deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, .04));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .16), 0 20px 50px rgba(0, 0, 0, .45);
+  backdrop-filter: blur(14px) saturate(1.3); -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  animation: float 7s ease-in-out infinite;
+}
+.float-card__label { font: 700 10px var(--font); letter-spacing: .1em; text-transform: uppercase; color: #b4b4c2; }
+.float-card b { font: 700 34px/1 var(--font); letter-spacing: -.04em; color: var(--neon); text-shadow: 0 0 20px rgba(198, 255, 61, .45); margin-top: 4px; }
+.float-card > span:not(.float-card__label) { font: 600 13px var(--font); }
+.float-card--a { left: 6%; top: 46%; width: 170px; }
+.float-card__spark { width: 100%; height: 30px; margin-top: 6px; }
+.float-card__spark polyline { stroke-dasharray: 160; animation: spark 3.5s var(--ease) infinite; }
+@keyframes spark { 0% { stroke-dashoffset: 160; } 60%, 100% { stroke-dashoffset: 0; } }
+.float-card--b { right: 6%; top: 30%; width: 220px; gap: 12px; animation-delay: -3s; }
+.float-card__row { display: flex; align-items: center; gap: 10px; font: 600 13px var(--font); }
+.float-card__figma { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: #1e1e1e; flex: none; }
+.float-card__figma svg { width: 18px; height: 18px; }
+.float-card__bar { display: block; height: 8px; border-radius: 999px; background: rgba(255, 255, 255, .12); overflow: hidden; }
+.float-card__bar i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #7c3aed, #a57cff, var(--neon)); animation: bar 4s var(--ease) infinite; }
+@keyframes bar { 0% { width: 6%; } 70%, 100% { width: 100%; } }
+
+/* Cursor "multiplayer" passeando pela tela, como no Figma */
+.hero__cursor { position: absolute; z-index: 2; left: 0; top: 0; display: flex; align-items: flex-start; gap: 2px; pointer-events: none; animation: cursor-path 12s ease-in-out infinite; }
+.hero__cursor svg { width: 22px; height: 22px; filter: drop-shadow(0 4px 8px rgba(0, 0, 0, .4)); }
+.hero__cursor span { margin-top: 16px; padding: 3px 9px; border-radius: 6px 999px 999px 999px; background: #a57cff; color: #0b0b10; font: 700 12px var(--font); }
+@keyframes cursor-path {
+  0% { transform: translate(18vw, 30vh); }
+  25% { transform: translate(64vw, 24vh); }
+  50% { transform: translate(70vw, 62vh); }
+  75% { transform: translate(28vw, 66vh); }
+  100% { transform: translate(18vw, 30vh); }
+}
+
+@media (max-width: 1100px) {
+  .float-card--a { left: 3%; top: 58%; }
+  .float-card--b { right: 3%; top: 22%; }
+}
+@media (max-width: 991px) {
+  .float-card, .hero__cursor { display: none; }
+}
+@media (max-width: 767px) {
+  .hero__floor { height: 45%; background-size: 44px 44px; }
+  .hero__fx::after { top: 66%; }
+}

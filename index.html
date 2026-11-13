@@ -51,7 +51,14 @@
 
 <main id="top">
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero hero--future">
+    <!-- Cena futurista: aurora, piso em grade em perspectiva, partículas e luz que segue o mouse -->
+    <div class="hero__fx" aria-hidden="true">
+      <span class="hero__aurora"></span>
+      <span class="hero__floor"></span>
+      <span class="hero__stars"></span>
+      <span class="hero__spot"></span>
+    </div>
     <span class="orb orb--1" aria-hidden="true"></span>
     <span class="orb orb--2" aria-hidden="true"></span>
     <span class="orb orb--3" aria-hidden="true"></span>
@@ -66,6 +73,21 @@
       <a class="btn" href="#trabalhos">Ver trabalhos
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M8 7h9v9"/></svg>
       </a>
+    </div>
+
+    <!-- Cards de vidro flutuando -->
+    <div class="float-card float-card--a" aria-hidden="true">
+      <span class="float-card__label">Case Abreu Oliveira</span>
+      <b>~30</b><span>contratos/mês</span>
+      <svg class="float-card__spark" viewBox="0 0 120 36"><polyline points="2,32 22,26 40,28 58,18 78,20 96,9 118,4" fill="none" stroke="#c6ff3d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="float-card float-card--b" aria-hidden="true">
+      <span class="float-card__row"><span class="float-card__figma"><svg viewBox="-10 -4 58 65"><path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"/><path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"/><path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg></span><span>Protótipo → site no ar</span></span>
+      <span class="float-card__bar"><i></i></span>
+    </div>
+    <div class="hero__cursor" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M3 2l17 8-7 2-3 8z" fill="#a57cff" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <span>Pedro</span>
     </div>
 
     <div class="hero__foot">

@@ -559,3 +559,13 @@ document.querySelectorAll('.js-linkedin').forEach(a => a.href = LINKEDIN);
 // Faixa de ferramentas: duplica os itens para o loop ficar contínuo
 const toolsTrack = document.querySelector('.tools__track');
 if (toolsTrack) toolsTrack.innerHTML += toolsTrack.innerHTML.replace(/<li>/g, '<li aria-hidden="true">');
+
+// Hero futurista: a luz de fundo acompanha o mouse
+const futureHero = document.querySelector('.hero--future');
+if (futureHero && !reduceMotion && matchMedia('(hover: hover)').matches) {
+  futureHero.addEventListener('pointermove', e => {
+    const r = futureHero.getBoundingClientRect();
+    futureHero.style.setProperty('--mx', `${e.clientX - r.left}px`);
+    futureHero.style.setProperty('--my', `${e.clientY - r.top}px`);
+  });
+}

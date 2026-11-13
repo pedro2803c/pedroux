@@ -98,6 +98,8 @@ const EN = {
   'Especialização em UX/UI Design': 'Specialization in UX/UI Design',
   'Bacharelado em Publicidade e Marketing': "Bachelor's degree in Advertising and Marketing",
   'Ferramentas': 'Tools',
+  'contratos/mês': 'contracts/mo',
+  'Protótipo → site no ar': 'Prototype → live site',
   'Pesquisa': 'Research',
   'Conversão': 'Conversion',
   'Entender o público': 'Know the audience',
