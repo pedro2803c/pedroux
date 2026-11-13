@@ -941,3 +941,69 @@ mark, .hl {
   .service { min-height: 0; }
   .service__art { min-height: 150px; }
 }
+
+/* =====================================================================
+   Legibilidade: textos maiores, mais contraste e mais respiro
+   (fica no fim para valer sobre as regras acima)
+   ===================================================================== */
+:root { --muted: #535363; --soft: #2f2f3b; }
+.is-dark, .services, .cta, .site, .viewer, .menu { --muted: #b4b4c2; --soft: #dcdce4; }
+.card--dark { --muted: #b4b4c2; }
+
+body { font-size: 16px; line-height: 1.65; text-rendering: optimizeLegibility; }
+h1, h2, h3 { text-wrap: balance; }
+p, li, dd { text-wrap: pretty; }
+.hero h1, .about__title, .services__head h2, .work__head h2, .cta h2, .case__head h2,
+.manual__head h2, .card h2, .next-case__name { letter-spacing: -.035em; }
+
+/* Rótulos e textos pequenos */
+.label { font-size: 12px; letter-spacing: .1em; }
+.nav__links a { font-size: 12px; letter-spacing: .1em; }
+.nav__back, .nav__menu-btn { font-size: 13px; }
+.tabs li, .dot-live, .chip-dark, .pills li { font-size: 13px; }
+.chip { font-size: 13px; padding: 10px 15px; }
+.badge { font-size: 11px; }
+.strip__tile span { font-size: 12px; }
+.browser__url { font-size: 12px; }
+.about__hint { font-size: 12px; }
+
+/* Parágrafos e listas */
+.hero__sub { font-size: clamp(16px, 1.35vw, 20px); line-height: 1.6; }
+.about__body p { font-size: clamp(16px, 1.2vw, 18px); line-height: 1.75; }
+.about__caption { font-size: 14px; }
+.about__caption span:last-child { opacity: .85; }
+.about__tags li { font-size: 13px; }
+.about__cv li, .about__tools { font-size: 15px; }
+.about__cv h3, .about__tools span { font-size: 12px; }
+.about__title .word { opacity: .3; }
+.stat > span { font-size: 15px; opacity: .9; }
+.card--head .card--accent p { font-size: 16px; }
+.services__head p { font-size: 16px; line-height: 1.65; }
+.service ul { font-size: 15px; gap: 8px; }
+.tools li { font-size: 14px; }
+.work__count, .work__head .label { font-size: 13px; }
+.row__seg, .row__url { font-size: 14px; }
+.row__num { font-size: 13px; }
+.tile__seg { font-size: 13px; }
+.tile__num { font-size: 13px; }
+.cta p { font-size: 16px; line-height: 1.65; }
+.cta__mail { font-size: 15px; }
+.cta__card small { font-size: 14px; opacity: .85; }
+.footer__grid ul { font-size: 15px; }
+.footer__bottom { font-size: 13px; }
+.menu__links a span { font-size: 12px; }
+
+/* Páginas de case */
+.case__lead { font-size: clamp(16px, 1.35vw, 19px); line-height: 1.7; }
+.case__meta dt { font-size: 11px; }
+.case__meta dd { font-size: 16px; }
+.step p, .step li { font-size: 16px; line-height: 1.75; }
+.step h4 { font-size: 12px; }
+.step__quote { font-size: 16px; line-height: 1.65; }
+.kpi span { font-size: 14px; opacity: .9; }
+.live__note { font-size: 13px; }
+.proto__bar, .proto__live { font-size: 13px; }
+.next-case__seg { font-size: 14px; }
+.manual__intro { font-size: 16px; }
+.flow__count { font-size: 14px; }
+.swatch span { font-size: 13px; opacity: .9; }
