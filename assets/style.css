@@ -1430,3 +1430,25 @@ p, li, dd { text-wrap: pretty; }
   mix-blend-mode: multiply; opacity: .55;
 }
 .holo:hover .holo__chip--1 { background: rgba(11, 11, 16, .75); }
+
+/* =====================================================================
+   Formas geométricas sem tampar textos (web e mobile)
+   ===================================================================== */
+/* Cursor "Pedro" passeia só pela margem esquerda, longe do título */
+@keyframes cursor-path {
+  0% { transform: translate(4vw, 18vh); }
+  25% { transform: translate(10vw, 26vh); }
+  50% { transform: translate(5vw, 34vh); }
+  75% { transform: translate(11vw, 28vh); }
+  100% { transform: translate(4vw, 18vh); }
+}
+/* Brilho do canto inferior desce para longe das abas */
+.hero--future .orb--4 { display: none; }
+.hero--future .orb--3 { bottom: 17%; right: 3%; width: clamp(110px, 12vw, 170px); }
+@media (max-width: 991px) {
+  .hero--future .orb--3, .hero--future .orb--4 { display: none; }
+}
+/* Globo do card "18 projetos" fica no canto, sem passar por trás do texto */
+@media (max-width: 1199px) {
+  .card--globe svg.globe { width: 60%; right: -18%; bottom: -42%; }
+}
