@@ -1,4 +1,4 @@
-# Pedro Henrique · Web Designer
+# Pedro Henrique · Designer Digital
 
 Portfólio de Pedro Henrique Coelho de Souza, com projetos de web design, UX/UI e branding.
 

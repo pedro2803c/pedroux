@@ -6,7 +6,7 @@ const EN = {
   // Navegação, menu e elementos comuns
   'Menu': 'Menu',
   // Home no estilo bento (textos quebrados pelos destaques <mark> ficam em pedaços)
-  'web designer com foco em': 'web designer focused on',
+  'designer digital com foco em': 'digital designer focused on',
   'Sites, landing pages e interfaces que transformam visitas em clientes. Desde 2019, com clientes no Brasil, em Londres e em Madri.': 'Websites, landing pages and interfaces that turn visits into clients. Since 2019, with clients in Brazil, London and Madrid.',
   'Ver trabalhos': 'See work',
   'Especialidades': 'Specialties',
@@ -34,8 +34,8 @@ const EN = {
   'Experiência, recomendações e contato direto': 'Experience, recommendations and direct contact',
   'Resposta rápida para conversar sobre a vaga': 'Quick reply to talk about the role',
   'Fechar ✕': 'Close ✕',
-  'Pedro Henrique ✦ Web Designer': 'Pedro Henrique ✦ Web Designer',
-  'Web Designer · UX/UI': 'Web Designer · UX/UI',
+  'Pedro Henrique ✦ Designer Digital': 'Pedro Henrique ✦ Digital Designer',
+  'Designer Digital · UX/UI': 'Digital Designer · UX/UI',
   'Início': 'Home',
   'Sobre': 'About',
   'Competências': 'Skills',
@@ -80,8 +80,8 @@ const EN = {
   'Disponível': 'Available',
   'Muito além do visual': 'Far beyond visuals',
   'Sou': "I'm",
-  ', Web Designer e UX/UI Designer, e acredito que um bom design vai muito além da estética. Ele simplifica a complexidade, transmite confiança e torna as experiências digitais mais intuitivas e naturais.':
-    ', a Web Designer and UX/UI Designer, and I believe good design goes far beyond aesthetics. It simplifies complexity, builds trust and makes digital experiences more intuitive and natural.',
+  ', Designer Digital e UX/UI Designer, e acredito que um bom design vai muito além da estética. Ele simplifica a complexidade, transmite confiança e torna as experiências digitais mais intuitivas e naturais.':
+    ', a Digital Designer and UX/UI Designer, and I believe good design goes far beyond aesthetics. It simplifies complexity, builds trust and makes digital experiences more intuitive and natural.',
   'Trabalho no desenvolvimento de plataformas SaaS, websites, landing pages e interfaces mobile, combinando design centrado no usuário, estratégia visual e otimização de conversão para transformar ideias complexas em produtos digitais funcionais, relevantes e que geram valor real.':
     'I design SaaS platforms, websites, landing pages and mobile interfaces, combining user-centered design, visual strategy and conversion optimization to turn complex ideas into digital products that work, matter and create real value.',
   'Plataformas SaaS': 'SaaS platforms',
@@ -102,7 +102,7 @@ const EN = {
   'Voltar ao topo': 'Back to top',
   'Navegação': 'Navigation',
   'Currículo (PDF)': 'Resume (PDF)',
-  'Web Designer · UX/UI. Sites e interfaces que transformam visitas em clientes.': 'Web Designer · UX/UI. Websites and interfaces that turn visits into clients.',
+  'Designer Digital · UX/UI. Sites e interfaces que transformam visitas em clientes.': 'Digital Designer · UX/UI. Websites and interfaces that turn visits into clients.',
   'Disponível para novos projetos': 'Available for new projects',
   'Brasil · Londres · Madri': 'Brazil · London · Madrid',
   'Você': 'You',
@@ -170,7 +170,7 @@ const EN = {
   // Home: contato
   'Vamos': "Let's",
   'conversar': 'talk',
-  'Procuro uma posição como Web Designer. Me chame no LinkedIn ou no WhatsApp.': "I'm looking for a Web Designer role. Reach out on LinkedIn or WhatsApp.",
+  'Procuro uma posição como Designer Digital. Me chame no LinkedIn ou no WhatsApp.': "I'm looking for a Digital Designer role. Reach out on LinkedIn or WhatsApp.",
 
   // Fichas e rótulos dos cases
   'Cliente': 'Client',
@@ -565,7 +565,7 @@ const EN = {
   'Mudar idioma': 'Change language',
 
   // Títulos das páginas (aba do navegador)
-  'Pedro Henrique · Web Designer': 'Pedro Henrique · Web Designer',
+  'Pedro Henrique · Designer Digital': 'Pedro Henrique · Digital Designer',
   'Abreu Oliveira · Case de landing page · Pedro Henrique': 'Abreu Oliveira · Landing page case · Pedro Henrique',
   'Atlantec · Case de reestruturação de catálogo · Pedro Henrique': 'Atlantec · Catalog restructuring case · Pedro Henrique',
   'Grupo Brasil · Case de rebranding e site · Pedro Henrique': 'Grupo Brasil · Rebranding and website case · Pedro Henrique',
