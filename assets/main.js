@@ -555,3 +555,7 @@ document.querySelectorAll('.js-whats').forEach(a => a.href = `https://wa.me/${WH
 
 const LINKEDIN = 'https://www.linkedin.com/in/pedro-henrique-coelho-de-souza-8a600a289/';
 document.querySelectorAll('.js-linkedin').forEach(a => a.href = LINKEDIN);
+
+// Faixa de ferramentas: duplica os itens para o loop ficar contínuo
+const toolsTrack = document.querySelector('.tools__track');
+if (toolsTrack) toolsTrack.innerHTML += toolsTrack.innerHTML.replace(/<li>/g, '<li aria-hidden="true">');

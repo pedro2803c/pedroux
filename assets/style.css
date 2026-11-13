@@ -856,3 +856,88 @@ mark, .hl {
 .whats svg, .whats:hover svg { color: #0b0b10; }
 .whats:hover, .whats:focus-visible { background: #0b0b10; color: var(--neon); }
 .whats:hover svg, .whats:focus-visible svg { color: var(--neon); }
+
+/* =====================================================================
+   Competências: ilustrações animadas e faixa de ferramentas
+   ===================================================================== */
+.service { grid-template-rows: auto 1fr auto; min-height: 460px; }
+.service__art { display: grid; place-items: center; min-height: 170px; }
+.service__art svg { width: 100%; max-width: 300px; height: auto; overflow: visible; }
+.service__art svg * { transform-box: fill-box; }
+.service:hover .service__art svg { animation-duration: .5s; }
+
+/* Web Design */
+.art-web svg { filter: drop-shadow(0 18px 30px rgba(46, 11, 110, .35)); }
+.w-line { transform-origin: left center; animation: w-type 4s var(--ease) infinite; }
+.w-line--2 { animation-delay: .15s; } .w-line--3 { animation-delay: .3s; }
+@keyframes w-type { 0% { transform: scaleX(0); } 18%, 100% { transform: scaleX(1); } }
+.w-bar { transform-origin: center bottom; animation: w-grow 4s var(--ease) infinite; }
+.w-bar--2 { animation-delay: .2s; } .w-bar--3 { animation-delay: .4s; }
+@keyframes w-grow { 0%, 45% { transform: scaleY(.15); } 65%, 100% { transform: scaleY(1); } }
+.w-trend { stroke-dasharray: 120; animation: w-draw 4s var(--ease) infinite; }
+@keyframes w-draw { 0%, 50% { stroke-dashoffset: 120; } 75%, 100% { stroke-dashoffset: 0; } }
+.w-dot { transform-origin: center; animation: w-pop 4s var(--ease) infinite; }
+@keyframes w-pop { 0%, 72% { transform: scale(0); } 80% { transform: scale(1.4); } 88%, 100% { transform: scale(1); } }
+.w-cursor { animation: w-cursor 4s var(--ease) infinite; }
+@keyframes w-cursor {
+  0% { transform: translate(210px, 140px); }
+  30%, 38% { transform: translate(64px, 104px); }
+  34% { transform: translate(64px, 104px) scale(.85); }
+  60% { transform: translate(120px, 70px); }
+  100% { transform: translate(210px, 140px); }
+}
+.w-btn { animation: w-btn 4s infinite; }
+@keyframes w-btn { 0%, 32% { fill: #0b0b10; } 34%, 50% { fill: #7c3aed; } 52%, 100% { fill: #0b0b10; } }
+.w-ripple { transform-origin: center; opacity: 0; animation: w-ripple 4s ease-out infinite; }
+@keyframes w-ripple { 0%, 33% { opacity: 0; transform: scale(.6); } 35% { opacity: 1; } 50%, 100% { opacity: 0; transform: scale(2.4); } }
+
+/* UX/UI */
+.art-ux svg { filter: drop-shadow(0 18px 30px rgba(11, 11, 16, .18)); }
+.u-feed { animation: u-scroll 6s cubic-bezier(.7, 0, .2, 1) infinite; }
+@keyframes u-scroll { 0%, 22% { transform: translateY(0); } 33%, 55% { transform: translateY(-64px); } 66%, 88% { transform: translateY(-128px); } 100% { transform: translateY(-128px); } }
+.u-path { animation: u-dash 1.2s linear infinite; }
+@keyframes u-dash { to { stroke-dashoffset: -24; } }
+.u-node { animation: u-node 3s infinite; }
+.u-node--2 { animation-delay: 1s; } .u-node--3 { animation-delay: 2s; }
+@keyframes u-node { 0%, 30%, 100% { fill: #fff; } 8%, 22% { fill: #c6ff3d; } }
+.u-spark { transform-origin: center; animation: pulse-scale 1.6s ease-in-out infinite; }
+@keyframes pulse-scale { 50% { transform: scale(1.5); } }
+
+/* Branding */
+.b-curve { stroke-dasharray: 220; animation: b-draw 4.5s var(--ease) infinite; filter: drop-shadow(0 0 6px rgba(198, 255, 61, .6)); }
+@keyframes b-draw { 0% { stroke-dashoffset: 220; } 50%, 80% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -220; } }
+.b-pen { offset-path: path("M22 128 C62 40 132 34 150 104"); offset-rotate: auto 90deg; animation: b-pen 4.5s var(--ease) infinite; }
+@keyframes b-pen { 0% { offset-distance: 0%; } 50%, 100% { offset-distance: 100%; } }
+.b-type { transform-origin: center; animation: b-type 4.5s var(--ease) infinite; }
+@keyframes b-type { 0%, 100% { font-weight: 300; letter-spacing: -1px; } 50% { font-weight: 800; letter-spacing: -4px; } }
+.b-sw { transform-origin: center; animation: b-bounce 1.8s var(--ease) infinite; }
+.b-sw--2 { animation-delay: .2s; } .b-sw--3 { animation-delay: .4s; }
+@keyframes b-bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-14px); } }
+.b-star { transform-origin: center; animation: b-spin 5s linear infinite; }
+@keyframes b-spin { to { transform: rotate(360deg); } }
+
+/* Faixa de ferramentas */
+.tools {
+  margin-top: 14px; overflow: hidden; border-radius: 999px; background: var(--card);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.tools__track { display: flex; gap: 10px; width: max-content; list-style: none; padding: 12px; animation: marquee 32s linear infinite; }
+.tools:hover .tools__track { animation-play-state: paused; }
+.tools li {
+  display: inline-flex; align-items: center; gap: 10px; white-space: nowrap;
+  padding: 10px 18px 10px 10px; border-radius: 999px; background: var(--card-2);
+  font: 700 13px var(--font); transition: background .2s, color .2s;
+}
+.tools li svg {
+  width: 32px; height: 32px; padding: 7px; border-radius: 50%; background: #0b0b10;
+  fill: none; stroke: var(--neon); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.tools li:nth-child(3n+2) svg { background: var(--accent); stroke: #0b0b10; }
+.tools li:nth-child(3n) svg { background: var(--neon); stroke: #0b0b10; }
+.tools li:hover { background: var(--neon); color: #0b0b10; }
+
+@media (max-width: 991px) {
+  .service { min-height: 0; }
+  .service__art { min-height: 150px; }
+}

@@ -98,6 +98,8 @@ const EN = {
   'Especialização em UX/UI Design': 'Specialization in UX/UI Design',
   'Bacharelado em Publicidade e Marketing': "Bachelor's degree in Advertising and Marketing",
   'Ferramentas': 'Tools',
+  'Testes A/B': 'A/B testing',
+  'Mobile first': 'Mobile first',
   'Figma · Framer · WordPress · Elementor · Photoshop · Illustrator · HubSpot · IA': 'Figma · Framer · WordPress · Elementor · Photoshop · Illustrator · HubSpot · AI',
 
   // Home: competências
