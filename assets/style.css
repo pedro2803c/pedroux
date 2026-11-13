@@ -1620,3 +1620,23 @@ p, li, dd { text-wrap: pretty; }
 }
 .step__quote a b { font-weight: 800; color: var(--accent-strong); text-decoration: none; display: inline-block; }
 .step__quote a:hover { color: var(--accent-strong); }
+
+/* =====================================================================
+   Varredura de contraste e sobreposição
+   ===================================================================== */
+/* Idioma inativo (PT/EN) legível na barra escura */
+.nav__lang span { opacity: .75; }
+.nav__lang span.is-active { opacity: 1; }
+/* "Carregando…" dos protótipos legível no fundo escuro */
+.proto__loading { color: #c9c9d6; }
+/* Letras gigantes decorativas não bloqueiam cliques nem cobrem os textos vizinhos */
+.footer__name, .cta__mark, .next-case__name { pointer-events: none; }
+.footer__bottom, .footer__grid { position: relative; z-index: 1; }
+/* Respiro entre rótulos e títulos grandes */
+.next-case .label { display: block; margin-bottom: 8px; }
+.services__head .label { display: inline-block; margin-bottom: 10px; }
+/* Destaques em títulos grandes: caixa justa ao texto, sem cortar letras da linha de cima */
+h1 mark, h2 mark, .about__title .word:last-child {
+  display: inline-block; line-height: 1; padding: .02em .18em .1em; margin-top: .1em; border-radius: .22em;
+}
+.nowrap { white-space: nowrap; }

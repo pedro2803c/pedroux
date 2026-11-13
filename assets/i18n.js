@@ -26,7 +26,7 @@ const EN = {
   'Madri': 'Madrid',
   'Do visual à': 'From visuals to',
   'conversão': 'conversion',
-  ', em três frentes': ', on three fronts',
+  'em três frentes': 'on three fronts',
   'Cada projeto une estratégia, interface e marca para gerar resultado real, não só uma tela bonita.': 'Every project combines strategy, interface and brand to deliver real results, not just a pretty screen.',
   'Vamos criar o próximo': "Let's build the next",
   'projeto': 'project',
