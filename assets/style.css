@@ -1336,3 +1336,97 @@ p, li, dd { text-wrap: pretty; }
 @media (max-width: 359px) {
   .nav__logo span { display: none; }
 }
+
+/* =====================================================================
+   Foto do Sobre: holograma em duotone roxo
+   - parado: duotone roxo + grade + linha de scan descendo
+   - hover: volta a cor real, glitch roxo/verde e inclinação 3D seguindo o mouse
+   ===================================================================== */
+.holo { cursor: default; background: #0b0b10; perspective: 1000px; overflow: visible; isolation: isolate; }
+.holo__inner {
+  position: absolute; inset: 0; overflow: hidden; border-radius: inherit;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform .5s var(--ease), box-shadow .5s;
+  box-shadow: 0 30px 60px rgba(46, 11, 110, .25);
+}
+.holo:hover .holo__inner { transition: transform .12s linear, box-shadow .5s; box-shadow: 0 40px 90px rgba(124, 58, 237, .45), 0 0 0 2px var(--neon); }
+.holo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.holo__img { filter: grayscale(1) contrast(1.15) brightness(1.02); transition: filter .6s var(--ease), transform .8s var(--ease); }
+.holo:hover .holo__img { filter: grayscale(.15) contrast(1.05); transform: scale(1.04); }
+/* Duotone: sombras roxo profundo, luzes lilás */
+.holo__tint {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #a57cff 0%, #6d28d9 55%, #1a0a3d 100%);
+  mix-blend-mode: color; opacity: .95; transition: opacity .6s var(--ease);
+}
+.holo__tint::after {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(120% 80% at 80% 0%, rgba(198, 255, 61, .28), transparent 55%);
+  mix-blend-mode: screen;
+}
+.holo:hover .holo__tint { opacity: .18; }
+/* Grade de pontos fina, efeito de tela */
+.holo__grid {
+  position: absolute; inset: 0; pointer-events: none; opacity: .35; mix-blend-mode: overlay;
+  background-image: radial-gradient(rgba(255, 255, 255, .7) 1px, transparent 1.2px);
+  background-size: 6px 6px;
+}
+/* Linha de scan descendo */
+.holo__scan {
+  position: absolute; left: 0; right: 0; top: 0; height: 22%;
+  background: linear-gradient(180deg, transparent, rgba(198, 255, 61, .18) 80%, rgba(198, 255, 61, .9) 98%, transparent);
+  mix-blend-mode: screen; animation: holo-scan 4.5s cubic-bezier(.6, 0, .4, 1) infinite;
+}
+@keyframes holo-scan { 0% { transform: translateY(-100%); } 70%, 100% { transform: translateY(560%); } }
+/* Reflexo de vidro que acompanha o mouse */
+.holo__shine {
+  position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .4s;
+  background: radial-gradient(40% 35% at var(--px, 50%) var(--py, 30%), rgba(255, 255, 255, .35), transparent 70%);
+  mix-blend-mode: soft-light;
+}
+.holo:hover .holo__shine { opacity: 1; }
+/* Glitch: duas cópias deslocadas em roxo e verde, só em rajadas no hover */
+.holo__ghost { opacity: 0; mix-blend-mode: screen; pointer-events: none; }
+.holo__ghost--a { filter: grayscale(1) brightness(.9) sepia(1) hue-rotate(220deg) saturate(6); }
+.holo__ghost--b { filter: grayscale(1) brightness(.9) sepia(1) hue-rotate(40deg) saturate(6); }
+.holo:hover .holo__ghost--a { animation: glitch-a 2.4s steps(1, end) infinite; }
+.holo:hover .holo__ghost--b { animation: glitch-b 2.4s steps(1, end) infinite; }
+@keyframes glitch-a {
+  0%, 18%, 100% { opacity: 0; transform: none; clip-path: inset(0); }
+  2% { opacity: .55; transform: translate(-8px, 0); clip-path: inset(12% 0 60% 0); }
+  5% { opacity: .55; transform: translate(6px, 0); clip-path: inset(55% 0 20% 0); }
+  8% { opacity: .5; transform: translate(-4px, 0); clip-path: inset(30% 0 45% 0); }
+  11% { opacity: 0; }
+}
+@keyframes glitch-b {
+  0%, 18%, 100% { opacity: 0; transform: none; clip-path: inset(0); }
+  3% { opacity: .5; transform: translate(8px, 0); clip-path: inset(40% 0 35% 0); }
+  6% { opacity: .5; transform: translate(-6px, 0); clip-path: inset(70% 0 8% 0); }
+  9% { opacity: .45; transform: translate(4px, 0); clip-path: inset(5% 0 75% 0); }
+  12% { opacity: 0; }
+}
+/* Etiquetas de vidro flutuando sobre a foto */
+.holo__chip {
+  position: absolute; z-index: 3; display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 14px; border-radius: 999px; font: 700 13px var(--font); color: #fff;
+  background: rgba(11, 11, 16, .55); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .22), 0 10px 30px rgba(0, 0, 0, .3);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  animation: float 6s ease-in-out infinite;
+  transform: translateZ(40px);
+}
+.holo__chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--neon); box-shadow: 0 0 10px var(--neon); animation: pulse 1.4s infinite; }
+.holo__chip--1 { top: 18px; left: 18px; }
+.holo__chip--2 { top: 38%; right: -14px; background: var(--accent); color: #0b0b10; animation-delay: -2s; }
+.holo__chip--3 { bottom: 64px; left: -14px; background: var(--neon); color: #0b0b10; animation-delay: -4s; }
+.holo .about__hint { z-index: 3; }
+@media (max-width: 767px) {
+  .holo__chip--2 { right: 10px; }
+  .holo__chip--3 { left: 10px; }
+}
+/* Duotone mais intenso: sombras em roxo profundo */
+.holo__tint::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(170deg, #8b5cf6, #3b0f8a 70%, #14052e);
+  mix-blend-mode: multiply; opacity: .55;
+}
+.holo:hover .holo__chip--1 { background: rgba(11, 11, 16, .75); }

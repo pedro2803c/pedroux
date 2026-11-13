@@ -141,10 +141,21 @@
   <section class="about" id="sobre">
     <div class="about__media reveal">
       <span class="about__ring" aria-hidden="true"></span>
-      <div class="about__photo js-pixel">
-        <img src="img/pedro.webp" alt="Pedro Henrique sorrindo, de boné e óculos" width="1024" height="760">
-        <canvas aria-hidden="true"></canvas>
-        <span class="about__hint" aria-hidden="true">▚ passe o mouse</span>
+      <!-- Foto holográfica: duotone roxo, linha de scan, glitch e inclinação 3D no hover -->
+      <div class="about__photo holo js-holo">
+        <div class="holo__inner">
+          <img class="holo__img" src="img/pedro.webp" alt="Pedro Henrique sorrindo, de boné e óculos" width="1024" height="760">
+          <img class="holo__ghost holo__ghost--a" src="img/pedro.webp" alt="" aria-hidden="true">
+          <img class="holo__ghost holo__ghost--b" src="img/pedro.webp" alt="" aria-hidden="true">
+          <span class="holo__tint" aria-hidden="true"></span>
+          <span class="holo__grid" aria-hidden="true"></span>
+          <span class="holo__scan" aria-hidden="true"></span>
+          <span class="holo__shine" aria-hidden="true"></span>
+        </div>
+        <span class="holo__chip holo__chip--1" aria-hidden="true"><i></i>Disponível</span>
+        <span class="holo__chip holo__chip--2" aria-hidden="true">UX/UI</span>
+        <span class="holo__chip holo__chip--3" aria-hidden="true">Web Design</span>
+        <span class="about__hint" aria-hidden="true">✦ passe o mouse</span>
       </div>
       <div class="about__caption"><span>Pedro Henrique</span><span>Web Designer · UX/UI</span></div>
     </div>

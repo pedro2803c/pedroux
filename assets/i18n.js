@@ -76,6 +76,8 @@ const EN = {
 
   // Home: sobre
   '▚ passe o mouse': '▚ hover me',
+  '✦ passe o mouse': '✦ hover me',
+  'Disponível': 'Available',
   'Muito além do visual': 'Far beyond visuals',
   'Sou': "I'm",
   ', Web Designer e UX/UI Designer, e acredito que um bom design vai muito além da estética. Ele simplifica a complexidade, transmite confiança e torna as experiências digitais mais intuitivas e naturais.':

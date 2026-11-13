@@ -588,3 +588,19 @@ if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
   document.documentElement.addEventListener('mouseleave', () => tag.classList.remove('is-on'));
   addEventListener('blur', () => tag.classList.remove('is-on'));
 }
+
+// Foto holográfica do Sobre: inclina em 3D e move o reflexo conforme o mouse
+const holo = document.querySelector('.js-holo');
+if (holo && !reduceMotion) {
+  holo.addEventListener('pointermove', e => {
+    const r = holo.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+    holo.style.setProperty('--ry', `${(px - .5) * 14}deg`);
+    holo.style.setProperty('--rx', `${(.5 - py) * 14}deg`);
+    holo.style.setProperty('--px', `${px * 100}%`);
+    holo.style.setProperty('--py', `${py * 100}%`);
+  });
+  holo.addEventListener('pointerleave', () => {
+    holo.style.removeProperty('--rx'); holo.style.removeProperty('--ry');
+  });
+}
