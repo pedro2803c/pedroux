@@ -1064,3 +1064,47 @@ p, li, dd { text-wrap: pretty; }
 .service ul li:nth-child(4) { transition-delay: .15s; } .service ul li:nth-child(5) { transition-delay: .2s; }
 .service ul li:nth-child(6) { transition-delay: .25s; }
 .service.reveal.is-in ul li:hover { transition-delay: 0s; }
+
+/* Card "Do briefing ao ar": processo em 3 etapas com progresso animado */
+.card--head .card--accent { gap: 16px; }
+.process {
+  position: relative; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;
+}
+/* trilho que liga as etapas, com um ponto verde percorrendo */
+.process::before {
+  content: ""; position: absolute; left: 12%; right: 12%; top: 31px; height: 2px; z-index: 0;
+  background: repeating-linear-gradient(90deg, rgba(11, 11, 16, .45) 0 6px, transparent 6px 12px);
+  animation: process-dash 1s linear infinite;
+}
+@keyframes process-dash { to { background-position: 12px 0; } }
+.process::after {
+  content: ""; position: absolute; top: 26px; left: 12%; width: 12px; height: 12px; border-radius: 50%; z-index: 0;
+  background: var(--neon); box-shadow: 0 0 0 3px #0b0b10, 0 0 14px var(--neon-glow);
+  animation: process-dot 3.6s var(--ease) infinite;
+}
+@keyframes process-dot { 0% { left: 12%; opacity: 0; } 8% { opacity: 1; } 85% { opacity: 1; } 100% { left: calc(88% - 12px); opacity: 0; } }
+.process li {
+  position: relative; z-index: 1; display: grid; justify-items: start; gap: 2px;
+  padding: 12px 14px 14px; border-radius: 16px;
+  background: rgba(255, 255, 255, .5); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .6);
+  transition: transform .3s var(--ease);
+}
+.process li:hover { transform: translateY(-3px); }
+.process__ico {
+  display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; margin-bottom: 8px;
+  background: #0b0b10; color: var(--neon);
+}
+.process__ico svg { width: 20px; height: 20px; }
+.process b { font: 700 16px/1.2 var(--font); letter-spacing: -.01em; }
+.process small { font: 500 13px/1.35 var(--font); opacity: .75; }
+.process li.is-goal { background: #0b0b10; color: #fff; box-shadow: 0 12px 30px rgba(46, 11, 110, .35); }
+.process li.is-goal .process__ico { background: var(--neon); color: #0b0b10; }
+.process li.is-goal small { opacity: .8; }
+.process__note { font: 600 14px var(--font) !important; opacity: .8; }
+@media (max-width: 479px) {
+  .process { gap: 6px; }
+  .process li { padding: 10px 10px 12px; }
+  .process small { display: none; }
+  .process b { font-size: 14px; }
+  .process::before, .process::after { top: 28px; }
+}
